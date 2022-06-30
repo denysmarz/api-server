@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Cliente;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\TipocuentaController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -33,3 +34,10 @@ Route::post('tipocuentas', [TipocuentaController::class, 'store']);
 Route::put('tipocuentas/{id}', [TipocuentaController::class, 'update']);
 Route::patch('tipocuentas/{id}', [TipocuentaController::class, 'update']);
 Route::delete('tipocuentas/{id}', [TipocuentaController::class, 'destroy']);
+
+Route::get('users', [UserController::class, 'index']);
+Route::get('users/{id}',[UserController::class, 'show']);
+Route::post('users', [UserController::class, 'store']);
+Route::put('users/{id}', [UserController::class, 'update']);
+Route::patch('users/{id}', [UserController::class, 'update']);
+Route::delete('users/{id}', [UserController::class, 'destroy']);

@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
          //Cliente::factory(20)->create();
          $this->call([
          ClienteSeeder::class,
-         TipocuentaSeeder::class]);
+         TipocuentaSeeder::class,
+         UserSeeder::class]);
+         
     }
 }
